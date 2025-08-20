@@ -25,6 +25,18 @@
             box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.3);
             border-color: #8b5cf6;
         }
+        .success-message {
+            display: none;
+            animation: fadeIn 0.5s;
+        }
+        .error-message {
+            display: none;
+            animation: fadeIn 0.5s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
     </style>
 </head>
 <body class="bg-white text-gray-800">
@@ -40,6 +52,7 @@
                         <a href="#home" class="font-medium text-gray-700 hover:text-purple-600 transition-colors">Home</a>
                         <a href="#services" class="font-medium text-gray-700 hover:text-purple-600 transition-colors">Services</a>
                         <a href="#about" class="font-medium text-gray-700 hover:text-purple-600 transition-colors">About</a>
+                        <a href="#contact" class="font-medium text-gray-700 hover:text-purple-600 transition-colors">Contact</a>
                         <a href="https://forms.gle/zhiNwt3PfCSRjakP6" target="_blank" class="font-medium bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-md">Schedule Consultation</a>
                     </div>
                 </div>
@@ -49,7 +62,7 @@
 
     <!-- Hero Section -->
     <section id="home" class="relative bg-gradient-to-br from-purple-50 via-white to-pink-50 overflow-hidden">
-        <div class="absolute inset-0 bg-[url('https://placehold.co/1920x1080/f8fafc/64748b')] opacity-0"></div>
+        <div class="absolute inset-0 bg-[url('https://placehold.co/1920x1080/f8fafc/64748b')] opacity-10"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 relative">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div class="space-y-8">
@@ -100,7 +113,7 @@
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Service 1 -->
-                <div class="bg-white p-8 rounded-2xl shadow-lg hover-scale border border-gray-100 transition-all duration-300">
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 transition-all duration-300">
                     <div class="w-14 h-14 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-6">
                         <i class="fas fa-chalkboard-teacher text-white text-xl"></i>
                     </div>
@@ -122,13 +135,10 @@
                             Implementation planning
                         </li>
                     </ul>
-                    <a href="https://forms.gle/zhiNwt3PfCSRjakP6" target="_blank" class="mt-6 inline-block w-full bg-purple-600 text-white text-center py-3 rounded-lg font-medium hover:bg-purple-700 transition-colors">
-                        Schedule Consultation
-                    </a>
                 </div>
                 
                 <!-- Service 2 -->
-                <div class="bg-white p-8 rounded-2xl shadow-lg hover-scale border border-gray-100 transition-all duration-300">
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 transition-all duration-300">
                     <div class="w-14 h-14 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center mb-6">
                         <i class="fas fa-cogs text-white text-xl"></i>
                     </div>
@@ -150,13 +160,10 @@
                             Client qualification systems
                         </li>
                     </ul>
-                    <a href="https://forms.gle/zhiNwt3PfCSRjakP6" target="_blank" class="mt-6 inline-block w-full bg-purple-600 text-white text-center py-3 rounded-lg font-medium hover:bg-purple-700 transition-colors">
-                        Schedule Consultation
-                    </a>
                 </div>
                 
                 <!-- Service 3 -->
-                <div class="bg-white p-8 rounded-2xl shadow-lg hover-scale border border-gray-100 transition-all duration-300">
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 transition-all duration-300">
                     <div class="w-14 h-14 bg-gradient-to-r from-green-500 to-teal-500 rounded-xl flex items-center justify-center mb-6">
                         <i class="fas fa-lightbulb text-white text-xl"></i>
                     </div>
@@ -178,9 +185,6 @@
                             AI roadmap development
                         </li>
                     </ul>
-                    <a href="https://forms.gle/zhiNwt3PfCSRjakP6" target="_blank" class="mt-6 inline-block w-full bg-purple-600 text-white text-center py-3 rounded-lg font-medium hover:bg-purple-700 transition-colors">
-                        Schedule Consultation
-                    </a>
                 </div>
             </div>
         </div>
@@ -197,50 +201,16 @@
             </div>
             
             <div class="space-y-12">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                    <div class="space-y-6 text-gray-600">
-                        <p class="text-lg leading-relaxed">
-                            Our mission is to help realtors stay competitive by harnessing the power of AI agents to improve productivity and client service.
-                        </p>
-                        <p class="text-lg leading-relaxed">
-                            We provide consulting services for realtors of all tech literacy levels, offering personalized guidance and strategic implementation plans to integrate AI into your daily operations.
-                        </p>
-                        <div class="mt-8">
-                            <a href="https://forms.gle/zhiNwt3PfCSRjakP6" target="_blank" class="inline-block bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
-                                Schedule Your Consultation
-                            </a>
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="bg-white rounded-xl overflow-hidden shadow-md">
-                            <img src="https://placehold.co/300x300/e2e8f0/64748b?text=Team+Member" alt="Team Member" class="w-full h-48 object-cover">
-                            <div class="p-4">
-                                <h3 class="font-semibold text-lg">[Name]</h3>
-                                <p class="text-gray-600">[Title]</p>
-                            </div>
-                        </div>
-                        <div class="bg-white rounded-xl overflow-hidden shadow-md">
-                            <img src="https://placehold.co/300x300/e2e8f0/64748b?text=Team+Member" alt="Team Member" class="w-full h-48 object-cover">
-                            <div class="p-4">
-                                <h3 class="font-semibold text-lg">[Name]</h3>
-                                <p class="text-gray-600">[Title]</p>
-                            </div>
-                        </div>
-                        <div class="bg-white rounded-xl overflow-hidden shadow-md">
-                            <img src="https://placehold.co/300x300/e2e8f0/64748b?text=Team+Member" alt="Team Member" class="w-full h-48 object-cover">
-                            <div class="p-4">
-                                <h3 class="font-semibold text-lg">[Name]</h3>
-                                <p class="text-gray-600">[Title]</p>
-                            </div>
-                        </div>
-                        <div class="bg-white rounded-xl overflow-hidden shadow-md">
-                            <img src="https://placehold.co/300x300/e2e8f0/64748b?text=Team+Member" alt="Team Member" class="w-full h-48 object-cover">
-                            <div class="p-4">
-                                <h3 class="font-semibold text-lg">[Name]</h3>
-                                <p class="text-gray-600">[Title]</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="space-y-6 text-gray-600">
+                    <p class="text-lg leading-relaxed">
+                        Our mission is to help realtors stay competitive by harnessing the power of AI agents to improve productivity and client service.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        Research from JLL shows that more than 90% of C-suite leaders believe AI will change workforce operations, and 89% believe AI can solve major commercial real estate challenges. With nearly two-thirds of companies piloting AI use cases but facing a shortage of AI-skilled talent, there's a critical need for accessible AI training and consulting.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        We provide consulting services for realtors of all tech literacy levels, offering personalized guidance and strategic implementation plans to integrate AI into your daily operations.
+                    </p>
                 </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white rounded-2xl p-8 shadow-md">
@@ -323,7 +293,7 @@
                                         </div>
                                         <div>
                                             <div class="font-semibold text-gray-800">Service Area</div>
-                                            <div class="text-gray-600">Southwest Florida (Naples)</div>
+                                            <div class="text-gray-600">Southwest Florida (Cape Coral, Naples, Fort Myers)</div>
                                         </div>
                                     </div>
                                     <div class="flex items-start space-x-4">
@@ -373,8 +343,8 @@
                                     </h4>
                                     <ul class="list-disc pl-5 space-y-1 text-gray-600">
                                         <li>A 30-minute discovery call to understand your business</li>
-                                        <li>Pricing and services based on your needs</li>
-                                        <li>Further information on our services</li>
+                                        <li>Personalized recommendations for AI implementation</li>
+                                        <li>Clear next steps to get started with AI</li>
                                     </ul>
                                 </div>
                                 
