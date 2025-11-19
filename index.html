@@ -166,9 +166,11 @@
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             border: 1px solid var(--border-color);
+            border-radius: 1rem;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
+            overflow: hidden;
             transform-style: preserve-3d;
             perspective: 1000px;
         }
@@ -183,7 +185,6 @@
             background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
             opacity: 0;
             transition: opacity 0.4s;
-            border-radius: 1rem 1rem 0 0;
         }
 
         .card-tech:hover {
